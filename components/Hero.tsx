@@ -13,39 +13,39 @@ const reviewImages = [profilePicture1, profilePicture2, profilePicture3];
 export default function Hero() {
   return (
     <>
-      <section className="bg-emerald-50">
-        <div className="grid sm:grid-cols-2 w-[90%] max-w-7xl mx-auto aspect-[2] min-h-80 ">
-          <div className="flex flex-col gap-4 items-start justify-center pr-8">
-            <h2 className="text-[max(1.2rem,_min(3vw,_3rem))]  font-semibold">
+      <section className="bg-accent-50">
+        <div className="mx-auto grid aspect-[2] min-h-80 w-[90%] max-w-7xl sm:grid-cols-2">
+          <div className="flex flex-col items-start justify-center gap-4 pr-8">
+            <h2 className="text-[max(1.2rem,_min(3vw,_3rem))] font-semibold">
               Relief Starts Here. Restore Comfort, Mobility, and Balance
             </h2>
-            <p className="text-sm lg:text-lg sm:text-base text-base-500">
+            <p className="text-base-500 text-sm sm:text-base lg:text-lg">
               Experience expert chiropractic care tailored to your body&apos;s
               unique needs. Whether you&apos;re recovering from injury, managing
               chronic pain, or simply aiming for a healthier, more active
               lifestyle.
             </p>
-            <button className="mt-4 bg-emerald-600 hover:bg-emerald-700 duration-300 text-white font-semibold rounded-full py-2 sm:py-3 text-sm sm:text-base px-4 sm:px-6">
+            <button className="bg-accent hover:bg-accent-200 mt-4 rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base">
               Book an Appointment
             </button>
           </div>
-          <div className="relative ">
+          <div className="relative">
             <Image
               src={heroImage1}
               alt="A woman getting a back massage"
-              className="hidden sm:block object-cover h-full "
+              className="hidden h-full object-cover sm:block"
               fill
             />
           </div>
         </div>
       </section>
-      <section className="grid grid-cols-2 w-[90%] max-w-7xl mx-auto">
+      <section className="mx-auto grid w-[90%] max-w-7xl grid-cols-2 py-8 sm:py-12 lg:py-16">
         <div className="flex gap-8">
-          <div className="flex-1 flex flex-col gap-4 py-4">
-            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium">
+          <div className="flex flex-1 flex-col gap-4 py-4">
+            <h3 className="text-lg font-medium sm:text-xl md:text-2xl lg:text-3xl">
               Happy Customers
             </h3>
-            <p className="text-base-500 border-l-2 border-emerald-400 pl-4">
+            <p className="text-base-500 border-accent-400 border-l-2 pl-4">
               Are you tired of living with back pain and ready to feel your best
               again? Welcome to ChiroCare.
             </p>
@@ -58,7 +58,7 @@ export default function Hero() {
                     alt="Review Image"
                     width={56}
                     height={56}
-                    className="border-3 border-white rounded-full"
+                    className="rounded-full border-3 border-white"
                     style={{
                       transform: `translateX(-${i * 30}%)`,
                     }}
@@ -74,18 +74,18 @@ export default function Hero() {
           <Image
             src={happyPatient}
             alt="Happy patient"
-            className="w-60 aspect-[1] object-cover"
+            className="aspect-[1] w-60 object-cover"
           />
         </div>
-        <div className="justify-center p-12 flex flex-col gap-4 items-start">
-          <h3 className="text-lg sm:text-xl font-medium">
+        <div className="flex flex-col items-start justify-center gap-4 p-12">
+          <h3 className="text-lg font-medium sm:text-xl">
             Special discount on your first visit
           </h3>
           <p className="text-base-500">
             As a token of appreciation for choosing us, we&apos;re offering an
             exclusive discount on your first visit!
           </p>
-          <button className="text-emerald-600 flex items-center gap-2 hover:underline underline-offset-2">
+          <button className="text-accent flex items-center gap-2 underline-offset-2 hover:underline">
             Get the offer <MoveRightIcon size={16} />
           </button>
         </div>

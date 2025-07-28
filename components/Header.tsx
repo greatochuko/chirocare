@@ -27,15 +27,15 @@ const navLinks = [
 export default function Header() {
   return (
     <header className="bg-white">
-      <nav className="flex items-center justify-between w-[90%] py-4 mx-auto max-w-7xl">
-        <h1 className="font-semibold text-xl text-emerald-600">ChiroCare</h1>
+      <nav className="mx-auto flex w-[90%] max-w-7xl items-center justify-between py-4">
+        <h1 className="text-accent text-xl font-semibold">ChiroCare</h1>
 
-        <ul className="sm:flex items-center gap-2 hidden ">
+        <ul className="hidden items-center gap-2 sm:flex">
           {navLinks.map((navLink, i) => (
             <li key={i}>
               <Link
                 href={navLink.href}
-                className="font-medium text-sm text-base-500 border-b-2 hover:text-base-800 border-transparent duration-200 p-2 hover:border-base-700"
+                className="text-base-500 hover:text-base-800 hover:border-base-700 border-b-2 border-transparent p-2 text-sm font-medium duration-200"
               >
                 {navLink.text}
               </Link>
@@ -43,7 +43,7 @@ export default function Header() {
           ))}
         </ul>
 
-        <button className=" hover:bg-emerald-600 duration-200 font-semibold hover:text-white border rounded-full text-sm  hover:border-emerald-600 p-2 px-4">
+        <button className="hover:bg-accent hover:border-accent rounded-full border p-2 px-4 text-sm font-semibold duration-200 hover:text-white">
           Appointment
         </button>
       </nav>

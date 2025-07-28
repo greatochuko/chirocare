@@ -16,4 +16,6 @@ button{
   --color-base-800: #262626;
   --color-base-900: #171717;
   --color-base-950: #0a0a0a;
+  --color-accent: #00B893;
+  --color-accent-200: #00A383;
 }
