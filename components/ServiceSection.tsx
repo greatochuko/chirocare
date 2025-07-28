@@ -39,17 +39,17 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="mx-auto flex w-[90%] max-w-7xl flex-col gap-4 p-8 sm:gap-6 sm:p-12 lg:p-16">
+    <section className="mx-auto flex w-[90%] max-w-7xl flex-col items-center gap-4 p-8 sm:gap-6 sm:p-12 lg:items-start lg:p-16">
       <span className="text-accent flex items-center gap-2 text-sm sm:text-base">
         <SparklesIcon size={16} />
         Our Service
       </span>
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-medium sm:text-xl md:text-2xl lg:text-3xl">
+      <div className="flex w-full flex-col items-center justify-between gap-4 lg:flex-row">
+        <h3 className="text-lg font-medium capitalize sm:text-xl md:text-2xl lg:text-3xl">
           Experienced in different types of therapy
         </h3>
 
-        <button className="bg-accent hover:bg-accent-200 mt-4 rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base">
+        <button className="bg-accent hover:bg-accent-200 rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base">
           Explore All
         </button>
       </div>
