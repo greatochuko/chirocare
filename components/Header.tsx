@@ -11,27 +11,31 @@ const navLinks = [
     href: "/about",
   },
   {
-    text: "Blog",
-    href: "/blog",
+    text: "Services",
+    href: "/services",
   },
   {
     text: "Contact Us",
     href: "/contact",
   },
+  {
+    text: "Blog",
+    href: "/blog",
+  },
 ];
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full">
+    <header className="bg-white">
       <nav className="flex items-center justify-between w-[90%] py-4 mx-auto max-w-7xl">
-        <h1 className="font-semibold text-xl">ChiroCare</h1>
+        <h1 className="font-semibold text-xl text-emerald-600">ChiroCare</h1>
 
-        <ul className="flex items-center gap-2">
+        <ul className="sm:flex items-center gap-2 hidden ">
           {navLinks.map((navLink, i) => (
             <li key={i}>
               <Link
                 href={navLink.href}
-                className="font-medium text-gray-600 hover:text-gray-800 duration-200 p-2 hover:underline"
+                className="font-medium text-sm text-base-500 border-b-2 hover:text-base-800 border-transparent duration-200 p-2 hover:border-base-700"
               >
                 {navLink.text}
               </Link>
@@ -39,8 +43,8 @@ export default function Header() {
           ))}
         </ul>
 
-        <button className="bg-gray-800 hover:bg-gray-900 duration-200 font-medium text-white text-sm rounded-md p-2 px-4">
-          Book an appointment
+        <button className=" hover:bg-emerald-600 duration-200 font-semibold hover:text-white border rounded-full text-sm  hover:border-emerald-600 p-2 px-4">
+          Appointment
         </button>
       </nav>
     </header>
