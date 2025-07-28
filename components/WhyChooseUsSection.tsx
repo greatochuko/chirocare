@@ -37,13 +37,13 @@ const reasonsToChooseUs = [
 export default function WhyChooseUsSection() {
   return (
     <section className="bg-base-100">
-      <div className="mx-auto flex w-[90%] max-w-7xl flex-col items-center gap-4 p-8 sm:gap-6 sm:p-12 lg:items-start lg:p-16">
+      <div className="mx-auto flex w-[90%] max-w-7xl flex-col items-center gap-4 py-8 sm:gap-6 sm:py-12 lg:items-start lg:py-16">
         <span className="text-accent flex items-center gap-2 text-sm capitalize sm:text-base">
           <SparklesIcon size={16} />
           Why choose us?
         </span>
         <h3 className="text-lg font-medium capitalize sm:text-xl md:text-2xl lg:text-3xl">
-          Reasons to choose our chiropractic care
+          Reasons to choose ChiroCare
         </h3>
 
         <ul className="grid justify-between gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">

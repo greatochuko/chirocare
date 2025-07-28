@@ -26,11 +26,11 @@ const navLinks = [
 
 export default function Header() {
   return (
-    <header className="bg-white">
+    <header className="border-base-200 border-b bg-white">
       <nav className="mx-auto flex w-[90%] max-w-7xl items-center justify-between py-4">
         <h1 className="text-accent text-xl font-semibold">ChiroCare</h1>
 
-        <ul className="hidden items-center gap-2 sm:flex">
+        <ul className="hidden items-center gap-2 lg:flex">
           {navLinks.map((navLink, i) => (
             <li key={i}>
               <Link

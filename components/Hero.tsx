@@ -13,7 +13,7 @@ const reviewImages = [profilePicture1, profilePicture2, profilePicture3];
 export default function Hero() {
   return (
     <>
-      <section className="bg-accent-50">
+      <section className="bg-accent-50 mt-4">
         <div className="mx-auto grid aspect-[2] min-h-80 w-[90%] max-w-7xl sm:grid-cols-2">
           <div className="flex flex-col items-start justify-center gap-4 pr-8">
             <h2 className="text-[max(1.2rem,_min(3vw,_3rem))] font-semibold">
@@ -39,8 +39,8 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <section className="mx-auto grid w-[90%] max-w-7xl grid-cols-2 py-8 sm:py-12 lg:py-16">
-        <div className="flex gap-8">
+      <section className="mx-auto grid w-[90%] max-w-7xl py-8 sm:py-12 lg:grid-cols-2 lg:py-16">
+        <div className="flex flex-col-reverse gap-8 sm:flex-row">
           <div className="flex flex-1 flex-col gap-4 py-4">
             <h3 className="text-lg font-medium sm:text-xl md:text-2xl lg:text-3xl">
               Happy Customers
@@ -74,7 +74,7 @@ export default function Hero() {
           <Image
             src={happyPatient}
             alt="Happy patient"
-            className="aspect-[1] w-60 object-cover"
+            className="aspect-video w-full object-cover sm:aspect-square sm:w-60"
           />
         </div>
         <div className="flex flex-col items-start justify-center gap-4 p-12">

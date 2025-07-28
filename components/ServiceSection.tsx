@@ -39,7 +39,7 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <section className="mx-auto flex w-[90%] max-w-7xl flex-col items-center gap-4 p-8 sm:gap-6 sm:p-12 lg:items-start lg:p-16">
+    <section className="mx-auto flex w-[90%] max-w-7xl flex-col items-center gap-4 py-8 sm:gap-6 sm:py-12 lg:items-start lg:py-16">
       <span className="text-accent flex items-center gap-2 text-sm sm:text-base">
         <SparklesIcon size={16} />
         Our Service
@@ -54,10 +54,10 @@ export default function ServiceSection() {
         </button>
       </div>
 
-      <ul className="flex justify-between gap-6 sm:gap-8">
+      <ul className="flex flex-col justify-between gap-6 sm:gap-8 md:flex-row">
         {services.slice(0, 3).map((service, i) => (
-          <li key={i} className="flex flex-1 flex-col gap-4">
-            <div className="relative aspect-square">
+          <li key={i} className="flex flex-1 gap-4 md:flex-col">
+            <div className="relative aspect-square w-40 md:w-auto">
               <Image
                 src={service.image}
                 alt={service.title}

@@ -6,9 +6,13 @@ import { SparklesIcon } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section className="bg-base-100 p-8 sm:p-12 lg:p-16">
-      <div className="mx-auto grid w-[90%] max-w-7xl lg:grid-cols-2">
-        <Image src={doctorConsultation} alt="Doctor Consultation" />
+    <section className="bg-base-100 py-8 sm:py-12 lg:py-16">
+      <div className="mx-auto grid w-[90%] max-w-7xl md:grid-cols-2">
+        <Image
+          src={doctorConsultation}
+          alt="Doctor Consultation"
+          className="aspect-video min-h-full w-full object-cover md:aspect-auto"
+        />
         <div className="flex flex-col items-start justify-center gap-4 p-8">
           <span className="text-accent flex items-center gap-2 text-sm sm:text-base">
             <SparklesIcon size={16} />
