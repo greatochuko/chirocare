@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <>
       <section className="bg-blue-50">
-        <div className="mx-auto grid aspect-[2] min-h-80 w-[90%] max-w-7xl sm:grid-cols-2">
+        <div className="mx-auto grid aspect-[2] min-h-88 w-[90%] max-w-7xl sm:grid-cols-2">
           <div className="flex flex-col items-start justify-center gap-4 pr-8">
             <h2 className="text-[max(1.2rem,_min(3vw,_3rem))] font-semibold">
               Relief Starts Here. Restore Comfort, Mobility, and Balance
@@ -35,6 +35,7 @@ export default function Hero() {
               alt="A woman getting a back massage"
               className="hidden h-full object-cover sm:block"
               fill
+              placeholder="blur"
             />
           </div>
         </div>
@@ -62,6 +63,7 @@ export default function Hero() {
                     style={{
                       transform: `translateX(-${i * 30}%)`,
                     }}
+                    placeholder="blur"
                   />
                 ))}
               </div>
@@ -75,6 +77,7 @@ export default function Hero() {
             src={happyPatient}
             alt="Happy patient"
             className="aspect-video w-full object-cover sm:aspect-square sm:w-60"
+            placeholder="blur"
           />
         </div>
         <div className="flex flex-col items-start justify-center gap-4 py-4 lg:p-12">

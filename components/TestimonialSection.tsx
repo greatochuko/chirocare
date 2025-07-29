@@ -67,6 +67,7 @@ export default function TestimonialSection() {
             alt="profile picture"
             fill
             className={`object-cover duration-300 ${i === currentIndex ? "" : "invisible opacity-0"}`}
+            placeholder="blur"
           />
         ))}
       </div>

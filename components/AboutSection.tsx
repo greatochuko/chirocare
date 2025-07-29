@@ -3,6 +3,7 @@ import React from "react";
 
 import doctorConsultation from "@/public/doctor-consultation.jpg";
 import { SparklesIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -12,6 +13,7 @@ export default function AboutSection() {
           src={doctorConsultation}
           alt="Doctor Consultation"
           className="aspect-video min-h-full w-full object-cover md:aspect-auto"
+          placeholder="blur"
         />
         <div className="flex flex-col items-start justify-center gap-4 p-4 md:p-8">
           <span className="text-accent flex items-center gap-2 text-sm sm:text-base">
@@ -28,9 +30,12 @@ export default function AboutSection() {
             and live better.
           </p>
 
-          <button className="bg-accent hover:bg-accent-200 mt-4 rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base">
+          <Link
+            href={"/about"}
+            className="bg-accent hover:bg-accent-200 mt-4 block rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base"
+          >
             Learn More
-          </button>
+          </Link>
         </div>
       </div>
     </section>

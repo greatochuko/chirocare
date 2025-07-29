@@ -2,6 +2,7 @@
 
 import { MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 const navLinks = [
@@ -30,6 +31,8 @@ const navLinks = [
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const pathname = usePathname();
+
   useEffect(() => {
     if (sidebarOpen) {
       document.body.style.overflow = "hidden";
@@ -49,7 +52,7 @@ export default function Header() {
               <li key={i}>
                 <Link
                   href={navLink.href}
-                  className="text-base-500 hover:text-base-800 hover:border-base-700 border-b-2 border-transparent p-2 text-sm font-medium duration-200"
+                  className={`text-base-500 hover:text-base-800 hover:border-base-700 border-b-2 border-transparent p-2 text-sm font-medium duration-200 ${pathname === navLink.href ? "text-base-800" : ""}`}
                 >
                   {navLink.text}
                 </Link>
