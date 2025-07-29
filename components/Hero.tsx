@@ -7,6 +7,7 @@ import profilePicture2 from "@/public/profile-picture-2.jpg";
 import profilePicture3 from "@/public/profile-picture-3.jpg";
 import happyPatient from "@/public/happy-patient.jpg";
 import { MoveRightIcon } from "lucide-react";
+import Link from "next/link";
 
 const reviewImages = [profilePicture1, profilePicture2, profilePicture3];
 
@@ -25,9 +26,12 @@ export default function Hero() {
               chronic pain, or simply aiming for a healthier, more active
               lifestyle.
             </p>
-            <button className="bg-accent hover:bg-accent-200 mt-4 rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base">
+            <Link
+              href={"/contact"}
+              className="bg-accent hover:bg-accent-200 mt-4 rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base"
+            >
               Book an Appointment
-            </button>
+            </Link>
           </div>
           <div className="relative">
             <Image

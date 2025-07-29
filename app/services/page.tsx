@@ -5,6 +5,9 @@ import React from "react";
 export default function page() {
   return (
     <div className="flex flex-col">
+      <h1 className="pt-4 text-center text-lg font-semibold uppercase sm:text-xl md:text-2xl lg:text-3xl">
+        Our Services
+      </h1>
       {services.map((service, i) => (
         <div
           key={i}

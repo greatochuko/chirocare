@@ -39,7 +39,7 @@ const footerLinks = [
       { text: "About", href: "/about" },
       { text: "Services", href: "/services" },
       { text: "Contact", href: "/contact" },
-      { text: "Blog", href: "#" },
+      // { text: "Blog", href: "#" },
     ],
   },
 ];

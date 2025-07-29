@@ -22,10 +22,10 @@ const navLinks = [
     text: "Contact Us",
     href: "/contact",
   },
-  {
-    text: "Blog",
-    href: "#",
-  },
+  // {
+  //   text: "Blog",
+  //   href: "#",
+  // },
 ];
 
 export default function Header() {
@@ -47,7 +47,7 @@ export default function Header() {
         <nav className="mx-auto flex w-[90%] max-w-7xl items-center justify-between py-4">
           <h1 className="text-accent text-xl font-semibold">ChiroCare</h1>
 
-          <ul className="hidden items-center gap-1 sm:flex md:gap-2">
+          <ul className="hidden items-center gap-2 sm:flex">
             {navLinks.map((navLink, i) => (
               <li key={i}>
                 <Link
@@ -60,9 +60,12 @@ export default function Header() {
             ))}
           </ul>
 
-          <button className="hover:bg-accent hover:border-accent hidden rounded-full border p-2 px-4 text-sm font-semibold duration-200 hover:text-white sm:block">
+          <Link
+            href={"/contact"}
+            className="hover:bg-accent hover:border-accent hidden rounded-full border p-2 px-4 text-sm font-semibold duration-200 hover:text-white sm:block"
+          >
             Appointment
-          </button>
+          </Link>
 
           <button
             onClick={() => setSidebarOpen((prev) => !prev)}
@@ -87,9 +90,12 @@ export default function Header() {
           </li>
         ))}
 
-        <button className="bg-accent border-accent hover:bg-accent-200 mt-auto rounded-full border p-2 px-4 text-sm font-semibold text-white duration-200">
+        <Link
+          href={"/contact"}
+          className="bg-accent border-accent hover:bg-accent-200 mt-auto rounded-full border p-2 px-4 text-sm font-semibold text-white duration-200"
+        >
           Appointment
-        </button>
+        </Link>
       </ul>
     </>
   );
