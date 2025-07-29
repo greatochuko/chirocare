@@ -44,8 +44,10 @@ export default function Header() {
   return (
     <>
       <header className="border-base-200 sticky top-0 z-40 border-b bg-white">
-        <nav className="mx-auto flex w-[90%] max-w-7xl items-center justify-between py-4">
-          <h1 className="text-accent text-xl font-semibold">ChiroCare</h1>
+        <nav className="mx-auto flex w-[90%] max-w-7xl items-center justify-between py-2">
+          <h1 className="text-accent text-xl font-semibold">
+            <Link href={"/"}>ChiroCare</Link>
+          </h1>
 
           <ul className="hidden items-center gap-2 sm:flex">
             {navLinks.map((navLink, i) => (
@@ -80,7 +82,7 @@ export default function Header() {
         className={`fixed top-0 right-0 z-20 flex h-dvh w-[80vw] flex-col gap-4 bg-white p-4 px-2 pt-18 duration-200 ${sidebarOpen ? "shadow-2xl" : "translate-x-full"}`}
       >
         {navLinks.map((navLink, i) => (
-          <li key={i}>
+          <li key={i} onClick={() => setSidebarOpen(false)}>
             <Link
               href={navLink.href}
               className="text-base-500 hover:text-base-800 block p-2 font-medium duration-200"

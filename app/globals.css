@@ -1,9 +1,22 @@
 @import "tailwindcss";
 
-@layer utilities{
-
-  button{
+@layer base {
+  button {
     cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
   }
 }
 
@@ -19,6 +32,6 @@
   --color-base-800: #262626;
   --color-base-900: #171717;
   --color-base-950: #0a0a0a;
-  --color-accent: #0466C8;
-  --color-accent-200: #0353A4;
+  --color-accent: #0466c8;
+  --color-accent-200: #0353a4;
 }
