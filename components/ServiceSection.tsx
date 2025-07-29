@@ -2,7 +2,11 @@ import { SparklesIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-import spinalAdjustmentImage from "@/public/doctor-consultation.jpg";
+import spinalAdjustmentImage from "@/public/spinal-adjustment.jpg";
+import postureCorrectionImage from "@/public/posture-correction.jpg";
+import sportsInjuryImage from "@/public/sports-injury.jpg";
+import neckPainImage from "@/public/neck-and-back-pain.jpg";
+import headacheImage from "@/public/headach-and-migrane-management.jpg";
 
 const services = [
   {
@@ -12,25 +16,25 @@ const services = [
       "Realign the spine to relieve pressure, reduce pain, and restore natural movement.",
   },
   {
-    image: spinalAdjustmentImage,
+    image: postureCorrectionImage,
     title: "Posture Correction",
     description:
       "Improve posture through targeted therapies that reduce strain on your muscles and joints.",
   },
   {
-    image: spinalAdjustmentImage,
+    image: sportsInjuryImage,
     title: "Sports Injury Rehab",
     description:
       "Customized recovery plans to help athletes heal faster and prevent future injuries.",
   },
   {
-    image: spinalAdjustmentImage,
+    image: neckPainImage,
     title: "Neck & Back Pain Relief",
     description:
       "Targeted treatments to ease chronic or sudden pain in the neck and lower back.",
   },
   {
-    image: spinalAdjustmentImage,
+    image: headacheImage,
     title: "Headache & Migraine Management",
     description:
       "Non-invasive techniques to reduce the frequency and intensity of headaches.",
