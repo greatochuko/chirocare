@@ -7,7 +7,7 @@ export default function BookNowSection() {
         Ready to start your journey to better health?
       </h4>
       <p className="sm:text-lg">Schedule your free consultation today!</p>
-      <button className="bg-accent hover:text-accent rounded-full border-2 border-white px-4 py-2 text-sm font-semibold text-white duration-300 hover:bg-white sm:px-6 sm:py-3 sm:text-base">
+      <button className="text-accent hover:bg-accent rounded-full border-2 border-white bg-white px-4 py-2 text-sm font-semibold duration-200 hover:text-white sm:px-6 sm:py-3 sm:text-base">
         Book an Appointment
       </button>
     </div>

@@ -13,7 +13,7 @@ export default function AboutSection() {
           alt="Doctor Consultation"
           className="aspect-video min-h-full w-full object-cover md:aspect-auto"
         />
-        <div className="flex flex-col items-start justify-center gap-4 p-8">
+        <div className="flex flex-col items-start justify-center gap-4 p-4 md:p-8">
           <span className="text-accent flex items-center gap-2 text-sm sm:text-base">
             <SparklesIcon size={16} />
             About Us

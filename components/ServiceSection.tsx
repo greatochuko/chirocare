@@ -56,8 +56,11 @@ export default function ServiceSection() {
 
       <ul className="flex flex-col justify-between gap-6 sm:gap-8 md:flex-row">
         {services.slice(0, 3).map((service, i) => (
-          <li key={i} className="flex flex-1 gap-4 md:flex-col">
-            <div className="relative aspect-square w-40 md:w-auto">
+          <li
+            key={i}
+            className="flex flex-1 flex-col gap-4 min-[480px]:flex-row md:flex-col"
+          >
+            <div className="relative aspect-video min-[480px]:aspect-square min-[480px]:w-40 md:w-auto">
               <Image
                 src={service.image}
                 alt={service.title}

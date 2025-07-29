@@ -13,7 +13,7 @@ const reviewImages = [profilePicture1, profilePicture2, profilePicture3];
 export default function Hero() {
   return (
     <>
-      <section className="bg-accent-50 mt-4">
+      <section className="bg-blue-50">
         <div className="mx-auto grid aspect-[2] min-h-80 w-[90%] max-w-7xl sm:grid-cols-2">
           <div className="flex flex-col items-start justify-center gap-4 pr-8">
             <h2 className="text-[max(1.2rem,_min(3vw,_3rem))] font-semibold">
@@ -45,7 +45,7 @@ export default function Hero() {
             <h3 className="text-lg font-medium sm:text-xl md:text-2xl lg:text-3xl">
               Happy Customers
             </h3>
-            <p className="text-base-500 border-accent-400 border-l-2 pl-4">
+            <p className="text-base-500 border-accent border-l-2 pl-4">
               Are you tired of living with back pain and ready to feel your best
               again? Welcome to ChiroCare.
             </p>
@@ -77,7 +77,7 @@ export default function Hero() {
             className="aspect-video w-full object-cover sm:aspect-square sm:w-60"
           />
         </div>
-        <div className="flex flex-col items-start justify-center gap-4 p-12">
+        <div className="flex flex-col items-start justify-center gap-4 py-4 lg:p-12">
           <h3 className="text-lg font-medium sm:text-xl">
             Special discount on your first visit
           </h3>
