@@ -36,9 +36,9 @@ const footerLinks = [
     title: "Company",
     links: [
       { text: "Home", href: "/" },
-      { text: "About", href: "#" },
-      { text: "Services", href: "#" },
-      { text: "Contact", href: "#" },
+      { text: "About", href: "/about" },
+      { text: "Services", href: "/services" },
+      { text: "Contact", href: "/contact" },
       { text: "Blog", href: "#" },
     ],
   },
