@@ -88,6 +88,7 @@ export default function Footer() {
           <input
             type="text"
             className="rounded-full border border-white px-6 py-3 text-sm sm:text-base"
+            placeholder="Enter your email"
           />
           <button className="bg-accent hover:bg-accent-200 rounded-full px-6 py-3 text-center text-sm font-semibold text-white duration-200 sm:text-base">
             Subscribe

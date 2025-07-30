@@ -15,8 +15,8 @@ export default function Hero() {
   return (
     <>
       <section className="bg-blue-50">
-        <div className="mx-auto grid aspect-[2] min-h-88 w-[90%] max-w-7xl sm:grid-cols-2">
-          <div className="flex flex-col items-start justify-center gap-4 pr-8">
+        <div className="mx-auto grid aspect-[2] min-h-72 w-[90%] max-w-7xl sm:min-h-88 sm:grid-cols-2">
+          <div className="flex flex-col items-center justify-center gap-4 text-center sm:items-start sm:pr-8 sm:text-left">
             <h2 className="text-[max(1.2rem,_min(3vw,_3rem))] font-semibold">
               Relief Starts Here. Restore Comfort, Mobility, and Balance
             </h2>
@@ -28,12 +28,12 @@ export default function Hero() {
             </p>
             <Link
               href={"/contact"}
-              className="bg-accent hover:bg-accent-200 mt-4 rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base"
+              className="bg-accent hover:bg-accent-200 mt-4 rounded-full px-6 py-3 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base"
             >
               Book an Appointment
             </Link>
           </div>
-          <div className="relative">
+          <div className="relative hidden sm:block">
             <Image
               src={heroImage1}
               alt="A woman getting a back massage"

@@ -64,7 +64,7 @@ export default function Header() {
 
           <Link
             href={"/contact"}
-            className="hover:bg-accent hover:border-accent hidden rounded-full border p-2 px-4 text-sm font-semibold duration-200 hover:text-white sm:block"
+            className="hover:bg-accent hover:border-accent hidden rounded-full border p-2 px-4 text-center text-sm font-semibold duration-200 hover:text-white sm:block"
           >
             Appointment
           </Link>
@@ -94,7 +94,7 @@ export default function Header() {
 
         <Link
           href={"/contact"}
-          className="bg-accent border-accent hover:bg-accent-200 mt-auto rounded-full border p-2 px-4 text-sm font-semibold text-white duration-200"
+          className="bg-accent border-accent hover:bg-accent-200 mt-auto rounded-full border p-2 px-4 text-center text-sm font-semibold text-white duration-200"
         >
           Appointment
         </Link>
