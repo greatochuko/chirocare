@@ -40,6 +40,7 @@ export default function page() {
           <Image
             src={doctor}
             alt="Doctor"
+            placeholder="blur"
             className="aspect-square w-48 rounded-2xl object-cover object-top sm:w-60"
           />
         </div>
@@ -121,6 +122,7 @@ export default function page() {
             src={doctor}
             alt="Doctor"
             fill
+            placeholder="blur"
             className="rounded-2xl object-cover object-top"
           />
         </div>
