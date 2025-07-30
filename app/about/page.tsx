@@ -44,8 +44,8 @@ export default function page() {
           />
         </div>
         <div className="flex flex-1 flex-col gap-8">
-          <div className="flex flex-col gap-4">
-            <h1 className="text-center text-lg font-medium sm:text-xl md:text-2xl lg:text-left">
+          <div className="flex flex-col gap-4 text-sm leading-6">
+            <h1 className="text-center text-lg font-semibold sm:text-xl md:text-2xl lg:text-left">
               Dr. Adrian Cole, DC, MS, CCSP
             </h1>
             <p>
