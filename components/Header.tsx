@@ -93,13 +93,6 @@ export default function Header() {
             </Link>
           </li>
         ))}
-
-        <Link
-          href={"/contact"}
-          className="bg-accent border-accent hover:bg-accent/90 mt-auto rounded-full border p-2 px-4 text-center text-sm font-semibold text-white duration-200"
-        >
-          Appointment
-        </Link>
       </ul>
     </>
   );
