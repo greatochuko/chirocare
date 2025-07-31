@@ -10,43 +10,47 @@ import {
 } from "lucide-react";
 import React from "react";
 
+import companyInformation from "@/data";
+import Link from "next/link";
+
 const contactInformations = [
   {
     Icon: PhoneIcon,
     name: "Phone",
-    value: "+1-234-567-890",
+    value: companyInformation.contactInfo.phoneNumber,
   },
   {
     Icon: MapPinIcon,
     name: "Address",
-    value: "1 Straight road, SF, CA.",
+    value: companyInformation.contactInfo.location.address,
   },
   {
     Icon: MailIcon,
     name: "Email",
-    value: "hello@chirocare.com",
+    value: companyInformation.contactInfo.email,
+    type: "link",
+    href: `mailto:${companyInformation.contactInfo.email}`,
   },
   {
     Icon: FacebookIcon,
     name: "Facebook",
-    value: "@chirocare",
+    value: companyInformation.contactInfo.socialMedia.facebook?.link,
+    type: "link",
+    href: companyInformation.contactInfo.socialMedia.facebook?.link,
   },
   {
     Icon: InstagramIcon,
     name: "Instagram",
-    value: "@chirocare",
+    value: companyInformation.contactInfo.socialMedia.instagram?.link,
+    type: "link",
+    href: companyInformation.contactInfo.socialMedia.instagram?.link,
   },
   {
     Icon: YoutubeIcon,
     name: "Youtube",
-    value: "@chirocare",
-  },
-];
-
-const businessHours = [
-  {
-    day: "Monday - Friday",
-    time: "8:00AM - 6:00PM",
+    value: companyInformation.contactInfo.socialMedia.youtube?.link,
+    type: "link",
+    href: companyInformation.contactInfo.socialMedia.youtube?.link,
   },
 ];
 
@@ -75,17 +79,30 @@ export default function page() {
               Contact Information
             </h2>
             <div className="grid grid-cols-2 gap-4 pt-4">
-              {contactInformations.map((contactInfo, i) => (
-                <div key={i} className="flex gap-2">
-                  <contactInfo.Icon size={16} className="text-accent" />
-                  <div className="flex flex-col text-sm">
-                    <h3 className="font-medium uppercase">
-                      {contactInfo.name}
-                    </h3>
-                    <p className="text-base-500">{contactInfo.value}</p>
+              {contactInformations
+                .filter((contact) =>
+                  contact.type === "link" ? contact.href : contact,
+                )
+                .map((contactInfo, i) => (
+                  <div key={i} className="flex gap-2">
+                    <contactInfo.Icon size={16} className="text-accent" />
+                    <div className="flex flex-col gap-1 text-sm">
+                      <h3 className="font-medium uppercase">
+                        {contactInfo.name}
+                      </h3>
+                      {contactInfo.type === "link" ? (
+                        <Link
+                          href={contactInfo.href || ""}
+                          className="text-base-500 hover:text-base-700 hover:underline"
+                        >
+                          {contactInfo.href}
+                        </Link>
+                      ) : (
+                        <p className="text-base-500">{contactInfo.value}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
           <div className="bg-base-100 flex-1 rounded-lg p-4">
@@ -93,7 +110,7 @@ export default function page() {
               Business Hours
             </h2>
             <div className="grid grid-cols-2 pt-4">
-              {businessHours.map((businessHour, i) => (
+              {companyInformation.businessHours.map((businessHour, i) => (
                 <div key={i} className="flex flex-col">
                   <h3 className="font-medium uppercase">{businessHour.day}</h3>
                   <p className="text-base-500 text-sm">{businessHour.time}</p>
@@ -103,7 +120,10 @@ export default function page() {
           </div>
         </div>
       </div>
-      <LeafletMap />
+      <LeafletMap
+        lat={companyInformation.contactInfo.location.lat}
+        lng={companyInformation.contactInfo.location.lng}
+      />
     </div>
   );
 }

@@ -1,6 +1,7 @@
-import { services } from "@/components/ServiceSection";
 import Image from "next/image";
 import React from "react";
+
+import companyInformation from "@/data";
 
 export default function page() {
   return (
@@ -8,7 +9,7 @@ export default function page() {
       <h1 className="pt-4 text-center text-lg font-semibold uppercase sm:text-xl md:text-2xl lg:text-3xl">
         Our Services
       </h1>
-      {services.map((service, i) => (
+      {companyInformation.services.map((service, i) => (
         <div
           key={i}
           className={`py-6 sm:py-8 md:py-10 lg:py-12 ${i % 2 === 1 ? "bg-base-100" : ""}`}
@@ -21,17 +22,17 @@ export default function page() {
                 {service.title}
               </h2>
               <p className="text-base-600 lg:text-lg">{service.description}</p>
-              <button className="bg-accent hover:bg-accent-200 w-fit rounded-full px-6 py-2 text-white opacity-90 duration-200 hover:opacity-100">
+              <button className="bg-accent hover:bg-accent/90 w-fit rounded-full px-6 py-2 text-white opacity-90 duration-200 hover:opacity-100">
                 Book Now
               </button>
             </div>
             <div className="relative aspect-video flex-1 overflow-hidden rounded-2xl">
               <Image
-                src={service.image}
+                src={service.imageUrl}
                 alt={service.title}
-                className="object-cover"
+                className="bg-base-200 overflow-hidden object-cover"
                 fill
-                placeholder="blur"
+                // placeholder="blur"
               />
             </div>
           </div>

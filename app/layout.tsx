@@ -3,35 +3,35 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import companyInformation from "@/data";
 
 const inter = Inter({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://chirocare.vercel.app";
+
 export const metadata: Metadata = {
-  title: "ChiroCare",
-  description:
-    "ChiroCare provides personalized chiropractic care focused on relieving pain, restoring mobility, and improving overall wellness.",
+  title: companyInformation.companyName,
+  description: `${companyInformation.companyName} provides personalized chiropractic care focused on relieving pain, restoring mobility, and improving overall wellness.`,
   openGraph: {
-    title: "ChiroCare",
-    description:
-      "ChiroCare provides personalized chiropractic care focused on relieving pain, restoring mobility, and improving overall wellness.",
-    url: "https://chirocare.vercel.app",
+    title: companyInformation.companyName,
+    description: `${companyInformation.companyName} provides personalized chiropractic care focused on relieving pain, restoring mobility, and improving overall wellness.`,
+    url: BASE_URL,
     images: [
       {
-        url: "https://chirocare.vercel.app/og-image.png",
+        url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "ChiroCare - Personalized Chiropractic Care",
+        alt: `${companyInformation.companyName} - Personalized Chiropractic Care`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ChiroCare",
-    description:
-      "ChiroCare provides personalized chiropractic care focused on relieving pain, restoring mobility, and improving overall wellness.",
-    images: ["https://chirocare.vercel.app/og-image.png"],
+    title: companyInformation.companyName,
+    description: `${companyInformation.companyName} provides personalized chiropractic care focused on relieving pain, restoring mobility, and improving overall wellness.`,
+    images: [`${BASE_URL}/og-image.png`],
   },
 };
 

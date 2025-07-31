@@ -5,6 +5,8 @@ import doctorConsultation from "@/public/doctor-consultation.jpg";
 import { SparklesIcon } from "lucide-react";
 import Link from "next/link";
 
+import companyInformation from "@/data";
+
 export default function AboutSection() {
   return (
     <section className="bg-base-100 py-8 sm:py-12 lg:py-16">
@@ -12,7 +14,7 @@ export default function AboutSection() {
         <Image
           src={doctorConsultation}
           alt="Doctor Consultation"
-          className="aspect-video min-h-full w-full object-cover md:aspect-auto"
+          className="aspect-video min-h-full w-full object-cover"
           placeholder="blur"
         />
         <div className="flex flex-col items-start justify-center gap-4 p-4 md:p-8">
@@ -21,18 +23,15 @@ export default function AboutSection() {
             About Us
           </span>
           <h3 className="text-lg font-semibold sm:text-xl md:text-2xl lg:text-3xl">
-            Your Health, Our Priority
+            {companyInformation.about.title}
           </h3>
           <p className="text-base-500 text-sm sm:text-base">
-            At ChiroCare, we focus on personalized chiropractic solutions that
-            relieve pain, improve mobility, and restore your overall well-being.
-            Discover how we&apos;ve helped hundreds feel better, move better,
-            and live better.
+            {companyInformation.about.subtitle}
           </p>
 
           <Link
             href={"/about"}
-            className="bg-accent hover:bg-accent-200 mt-4 block rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base"
+            className="bg-accent hover:bg-accent/90 mt-4 block rounded-full px-4 py-2 text-sm font-semibold text-white duration-300 sm:px-6 sm:py-3 sm:text-base"
           >
             Learn More
           </Link>

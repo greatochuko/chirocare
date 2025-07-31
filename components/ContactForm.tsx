@@ -3,9 +3,9 @@
 import React from "react";
 
 export default function ContactForm() {
-    function handleSubmit(e: React.FormEvent) {
-      e.preventDefault();
-    }
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+  }
   return (
     <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-4 pt-4">
       <div className="flex flex-col gap-2 text-sm">
@@ -58,7 +58,7 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="bg-accent hover:bg-accent-200 disabled:bg-accent/50 col-span-2 rounded-lg px-4 py-2 text-sm font-medium text-white duration-200 sm:text-base"
+        className="bg-accent hover:bg-accent/90 disabled:bg-accent/50 col-span-2 rounded-lg px-4 py-2 text-sm font-medium text-white duration-200 sm:text-base"
       >
         Send Message
       </button>

@@ -18,11 +18,11 @@ const icon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-export default function Map() {
+export default function Map({ lat, lng }: { lat: number; lng: number }) {
   return (
     <div className="h-[400px] w-full">
       <MapContainer
-        center={[37.7749, -122.4194]}
+        center={[lat, lng]}
         zoom={13}
         scrollWheelZoom={false}
         className="h-full w-full"

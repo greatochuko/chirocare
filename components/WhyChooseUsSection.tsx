@@ -1,38 +1,7 @@
 import { CheckCircleIcon, SparklesIcon } from "lucide-react";
 import React from "react";
 
-const reasonsToChooseUs = [
-  {
-    title: "Experienced Professionals",
-    description:
-      "Our licensed chiropractors bring years of hands-on experience and specialized care to every session.",
-  },
-  {
-    title: "Personalized Treatment Plans",
-    description:
-      "We tailor each treatment to your specific needs, ensuring the most effective path to recovery.",
-  },
-  {
-    title: "Modern Techniques & Equipment",
-    description:
-      "We use up-to-date chiropractic methods and advanced tools to deliver safe, efficient care.",
-  },
-  {
-    title: "Patient-Centered Approach",
-    description:
-      "Your comfort, goals, and long-term health guide everything we do from consultation to care.",
-  },
-  {
-    title: "Trusted by the Community",
-    description:
-      "Hundreds of satisfied patients rely on us for pain relief, better posture, and healthier living.",
-  },
-  {
-    title: "Convenient Scheduling",
-    description:
-      "We offer flexible appointment times and easy online booking to fit your busy lifestyle.",
-  },
-];
+import companyInformation from "@/data";
 
 export default function WhyChooseUsSection() {
   return (
@@ -43,11 +12,11 @@ export default function WhyChooseUsSection() {
           Why choose us?
         </span>
         <h3 className="text-lg font-medium capitalize sm:text-xl md:text-2xl lg:text-3xl">
-          Reasons to choose ChiroCare
+          Reasons to choose {companyInformation.companyName}
         </h3>
 
         <ul className="grid justify-between gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {reasonsToChooseUs.map((reason, i) => (
+          {companyInformation.reasonsToChooseUs.map((reason, i) => (
             <li key={i} className="flex items-start gap-4">
               <CheckCircleIcon size={16} className="text-accent" />
               <div className="flex flex-1 flex-col gap-2">

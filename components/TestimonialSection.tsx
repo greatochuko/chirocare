@@ -10,72 +10,7 @@ import {
 import Image from "next/image";
 import React, { useRef } from "react";
 
-import profilePicture1 from "@/public/profile-picture-1.jpg";
-import profilePicture2 from "@/public/profile-picture-2.jpg";
-import profilePicture3 from "@/public/profile-picture-3.jpg";
-
-const reviews = [
-  {
-    profilePicture: profilePicture2,
-    review:
-      "After just a few sessions, my lower back pain is almost completely gone. Dr. Kate truly knows what she's doing.",
-    name: "Michelle O.",
-  },
-  {
-    profilePicture: profilePicture1,
-    review:
-      "I came in barely able to turn my neck. Now I feel like a new person. Highly recommend this clinic!",
-    name: "Derrick L.",
-  },
-  {
-    profilePicture: profilePicture3,
-    review:
-      "Warm staff, clean office, and Dr. Josh is incredibly skilled. My posture has improved noticeably.",
-    name: "Sandra T.",
-  },
-  {
-    profilePicture: profilePicture1,
-    review:
-      "Was skeptical at first, but this has helped my migraines more than anything else I've tried.",
-    name: "Brian C.",
-  },
-  {
-    profilePicture: profilePicture2,
-    review:
-      "I appreciate how much time they took to explain everything. Very personalized and professional care.",
-    name: "Elena P.",
-  },
-  {
-    profilePicture: profilePicture3,
-    review:
-      "They got me walking upright again after a sports injury. Forever grateful for their care and patience.",
-    name: "Mark A.",
-  },
-  {
-    profilePicture: profilePicture1,
-    review:
-      "Every visit leaves me feeling better and better. It’s like a reset button for my body each week.",
-    name: "Tina W.",
-  },
-  {
-    profilePicture: profilePicture2,
-    review:
-      "I’ve tried other chiropractors, but this team is the real deal. They genuinely care about your health.",
-    name: "Jason M.",
-  },
-  {
-    profilePicture: profilePicture3,
-    review:
-      "I used to wake up with back stiffness every day. That’s completely gone now thanks to Dr. Lisa!",
-    name: "Heather S.",
-  },
-  {
-    profilePicture: profilePicture1,
-    review:
-      "Professional, friendly, and effective. I’m finally pain-free after years of discomfort.",
-    name: "David R.",
-  },
-];
+import companyInformation from "@/data";
 
 export default function TestimonialSection() {
   const reviewContainerRef = useRef<HTMLDivElement>(null);
@@ -112,7 +47,7 @@ export default function TestimonialSection() {
         ref={reviewContainerRef}
         style={{ gridAutoColumns: "20rem" }}
       >
-        {reviews.map((review, i) => (
+        {companyInformation.testimonials.map((testimonial, i) => (
           <div
             key={i}
             className="border-base-100 flex snap-start flex-col gap-4 rounded-xl border bg-white p-4 shadow"
@@ -126,18 +61,18 @@ export default function TestimonialSection() {
               </div>
             </div>
             <p className="text-base-500 text-sm sm:text-base">
-              {review.review}
+              {testimonial.review}
             </p>
-            <div className="flex items-center gap-2">
+            <div className="mt-auto flex items-center gap-2">
               <Image
-                src={review.profilePicture}
-                alt={review.name}
+                src={testimonial.profilePictureUrl}
+                alt={testimonial.name}
                 width={32}
                 height={32}
-                className="rounded-full"
+                className="bg-base-200 overflow-hidden rounded-full"
               />
               <h4 className="text-sm font-medium sm:text-base">
-                {review.name}
+                {testimonial.name}
               </h4>
             </div>
           </div>
@@ -146,13 +81,13 @@ export default function TestimonialSection() {
       <div className="flex items-center justify-center gap-4">
         <button
           onClick={handlePrev}
-          className="bg-accent hover:bg-accent-200 rounded-full border p-2 text-white duration-200"
+          className="bg-accent hover:bg-accent/90 rounded-full border p-2 text-white duration-200"
         >
           <ChevronLeftIcon size={20} />
         </button>
         <button
           onClick={handleNext}
-          className="bg-accent hover:bg-accent-200 rounded-full border p-2 text-white duration-200"
+          className="bg-accent hover:bg-accent/90 rounded-full border p-2 text-white duration-200"
         >
           <ChevronRightIcon size={20} />
         </button>

@@ -5,13 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
+import companyInformation from "@/data";
+
 const navLinks = [
   {
     text: "Home",
     href: "/",
   },
   {
-    text: "About Us",
+    text: "About",
     href: "/about",
   },
   {
@@ -19,7 +21,7 @@ const navLinks = [
     href: "/services",
   },
   {
-    text: "Contact Us",
+    text: "Contact",
     href: "/contact",
   },
   // {
@@ -46,7 +48,7 @@ export default function Header() {
       <header className="border-base-200 sticky top-0 z-40 border-b bg-white">
         <nav className="mx-auto flex w-[90%] max-w-7xl items-center justify-between py-2">
           <h1 className="text-accent text-xl font-semibold">
-            <Link href={"/"}>ChiroCare</Link>
+            <Link href={"/"}>{companyInformation.companyName}</Link>
           </h1>
 
           <ul className="hidden items-center gap-2 sm:flex">
@@ -94,7 +96,7 @@ export default function Header() {
 
         <Link
           href={"/contact"}
-          className="bg-accent border-accent hover:bg-accent-200 mt-auto rounded-full border p-2 px-4 text-center text-sm font-semibold text-white duration-200"
+          className="bg-accent border-accent hover:bg-accent/90 mt-auto rounded-full border p-2 px-4 text-center text-sm font-semibold text-white duration-200"
         >
           Appointment
         </Link>

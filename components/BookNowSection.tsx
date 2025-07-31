@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 
+import companyInformation from "@/data";
+
 export default function BookNowSection() {
   return (
     <div className="bg-accent flex flex-col items-center gap-4 p-8 text-center text-white sm:gap-6 sm:p-12 lg:p-16">
@@ -12,7 +14,7 @@ export default function BookNowSection() {
         href={"/contact"}
         className="text-accent hover:bg-accent rounded-full border-2 border-white bg-white px-4 py-2 text-sm font-semibold duration-200 hover:text-white sm:px-6 sm:py-3 sm:text-base"
       >
-        Book an Appointment
+        {companyInformation.callToAction}
       </Link>
     </div>
   );
