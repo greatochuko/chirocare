@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import doctor from "@/public/doctor.jpg";
+import doctor from "@/public/doctor.png";
 
 import companyInformation from "@/data";
 
@@ -55,7 +55,7 @@ export default function page() {
             alt="Doctor"
             fill
             placeholder="blur"
-            className="rounded-2xl object-cover object-top"
+            className="max-h-[800px] rounded-2xl object-cover object-top"
           />
         </div>
       </div>
